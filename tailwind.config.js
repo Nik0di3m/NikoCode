@@ -26,7 +26,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      alignItems: ['odd']
+    },
   },
   plugins: [],
 }

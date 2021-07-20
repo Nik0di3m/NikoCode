@@ -3,3 +3,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.timeline{
+    left: calc(50% - 1px);
+}
+
+.dot{
+    top: calc(50% - 12px);
+    left: calc(50% - 12px);
+    z-index: 30;
+}
+
+.timeline-dot:nth-child(8) .dot{
+    background-color: #323232;
+}
+.timeline-dot:nth-child(7) .dot{
+    background-color: #323232;
+}
+.timeline-dot:nth-child(even) .test{
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+@media (max-width:648px) {
+    .timeline{
+        left: calc(50% - 2px);
+    }
+    .dot{
+        top: calc(50% - 8px);
+        left: calc(50% - 8px);
+        z-index: 30;
+    }
+}
+@media (min-width:648px) and (max-width: 769px) {
+    .timeline{
+        left: calc(50% - 5px);
+    }
+}
