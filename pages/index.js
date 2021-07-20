@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import AboutMe from '../components/AboutMe/AboutMe'
+import Contact from '../components/Contact/Contact'
 import Hero from '../components/Hero/Hero'
 import Menu from '../components/Menu/Menu'
 import MyJourney from '../components/MyJourney/MyJourney'
@@ -21,6 +22,7 @@ const index = () => {
         <Services />
         <Portfolio />
         <NewProject />
+        <Contact />
       </div>
 
     </div>

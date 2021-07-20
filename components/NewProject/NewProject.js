@@ -15,7 +15,7 @@ const NewProject = () => {
                     style="w-44 font-medium mt-6"
                 />
             </div>
-            <div className="mt-12 lg:mt-0">
+            <div className="flex justify-center mt-12 lg:mt-0">
                 {/* image */}
                 <Image src="/images/success.png" width={350} height={350} objectFit='contain' />
             </div>
