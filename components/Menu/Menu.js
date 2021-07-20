@@ -1,6 +1,5 @@
 import MenuItems from "./MenuItems"
-import { MoonIcon, MenuIcon } from '@heroicons/react/outline'
-import { MoonIcon as MooonSolid } from '@heroicons/react/solid'
+import { MoonIcon, MenuIcon, SunIcon } from '@heroicons/react/outline'
 import { useTheme } from "next-themes"
 import { useState } from "react"
 import SideBar from "./SideBar"
@@ -34,14 +33,14 @@ const Menu = () => {
                     {theme === 'light' ?
                         <MoonIcon className="h-5 ml-5 hover:scale-110 cursor-pointer" onClick={themeHendler} />
                         :
-                        <MooonSolid className="h-5 ml-5 hover:scale-110 cursor-pointer" onClick={themeHendler} />
+                        <SunIcon className="h-5 ml-5 hover:scale-110 cursor-pointer" onClick={themeHendler} />
                     }
                 </div>
                 <div className="flex w-2/6 justify-between lg:hidden">
                     {theme === 'light' ?
                         <MoonIcon className="h-8 ml-5 hover:scale-110 cursor-pointer" onClick={themeHendler} />
                         :
-                        <MooonSolid className="h-8 ml-5 hover:scale-110 cursor-pointer" onClick={themeHendler} />
+                        <SunIcon className="h-8 ml-5 hover:scale-110 cursor-pointer" onClick={themeHendler} />
                     }
                     {theme === 'light' ?
                         <MenuIcon className="h-8" onClick={() => setActive(!active)} />

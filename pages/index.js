@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import AboutMe from '../components/AboutMe/AboutMe'
 import Hero from '../components/Hero/Hero'
 import Menu from '../components/Menu/Menu'
 
@@ -11,6 +12,7 @@ const index = () => {
       <Menu />
       <div className='max-w-[1536px] m-auto min-h-screen'>
         <Hero />
+        <AboutMe />
       </div>
 
     </div>

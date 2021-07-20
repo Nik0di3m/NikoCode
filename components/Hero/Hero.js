@@ -5,7 +5,7 @@ import Image from "next/image"
 import Button from '../Button/Button';
 const Hero = () => {
     return (
-        <div className="flex flex-col justify-center items-center lg:flex-row">
+        <div className="flex flex-col justify-center items-center lg:flex-row lg:min-h-[80vh]">
             <div className="flex-col flex justify-around items-center lg:flex-row">
                 <div className="flex justify-around h-auto w-2/5 mb-6 mt-2 lg:flex-col lg:h-60 lg:w-auto lg:mb-0 lg:mt-0">
                     {/* social meda */}
@@ -22,9 +22,9 @@ const Hero = () => {
                         <p className="w-5/6 font-light lg:w-2/3 dark:text-secondary">Junior level experience in web developer. Love in React and Firebase, producing quality work with passion.</p>
                     </div>
                     <Button
-                        text="Contact"
+                        text="Contact Me"
                         icon={<PaperAirplaneIcon className="h-6 rotate-90" />}
-                        style='mt-2 shadow-md'
+                        style='mt-6 shadow-md w-40 '
                     />
                 </div>
                 <div className="p-2">
