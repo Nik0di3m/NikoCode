@@ -21,7 +21,7 @@ const Menu = () => {
     return (
         <nav className="flex bg-light dark:bg-dark dark:text-light sticky top-0 z-50 transition duration-500 ease-in-out">
             <div className="flex justify-between w-[95%] m-auto p-2 items-center">
-                <div className="text-xl hover:scale-110 cursor-pointer">
+                <div className="text-xl hover:scale-110 cursor-pointer transition duration-200">
                     Niko<span className="text-orange">Code</span>
                 </div>
                 <div className="hidden lg:flex justify-between items-center">

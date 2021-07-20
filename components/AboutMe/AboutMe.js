@@ -23,6 +23,7 @@ const AboutMe = () => {
                         text="Download CV"
                         icon={<DownloadIcon className="h-8" />}
                         style="mt-6 shadow-md"
+                        color="bg-orange text-light"
                     />
                 </div>
             </div>

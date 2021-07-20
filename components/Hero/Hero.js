@@ -9,7 +9,7 @@ const Hero = () => {
             <div className="flex-col flex justify-around items-center lg:flex-row">
                 <div className="flex justify-around h-auto w-2/5 mb-6 mt-2 lg:flex-col lg:h-60 lg:w-auto lg:mb-0 lg:mt-0">
                     {/* social meda */}
-                    <GitHubIcon fontSize='large' style={{ color: "#FE6D04" }} className="hover:scale-110 cursor-pointer" />
+                    <GitHubIcon fontSize='large' style={{ color: "#FE6D04" }} className="hover:scale-110 cursor-pointer " />
                     <LinkedInIcon fontSize='large' style={{ color: "#FE6D04" }} className="hover:scale-110 cursor-pointer" />
                 </div>
                 {/* main container */}
@@ -24,7 +24,8 @@ const Hero = () => {
                     <Button
                         text="Contact Me"
                         icon={<PaperAirplaneIcon className="h-6 rotate-90" />}
-                        style='mt-6 shadow-md w-40 '
+                        style='mt-6 shadow-md w-40'
+                        color="bg-orange text-light"
                     />
                 </div>
                 <div className="p-2">

@@ -3,6 +3,8 @@ import AboutMe from '../components/AboutMe/AboutMe'
 import Hero from '../components/Hero/Hero'
 import Menu from '../components/Menu/Menu'
 import MyJourney from '../components/MyJourney/MyJourney'
+import NewProject from '../components/NewProject/NewProject'
+import Portfolio from '../components/Portfolio/Portfolio'
 import Services from '../components/Services/Services'
 
 const index = () => {
@@ -17,6 +19,8 @@ const index = () => {
         <AboutMe />
         <MyJourney />
         <Services />
+        <Portfolio />
+        <NewProject />
       </div>
 
     </div>

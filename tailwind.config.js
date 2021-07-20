@@ -7,6 +7,7 @@ module.exports = {
       orange: '#FE6D04',
       light: '#FFFFFF',
       dark: '#0d1117',
+      bgdark: '#323232',
     },
     textColor: {
 
