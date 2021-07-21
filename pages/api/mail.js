@@ -23,7 +23,7 @@ const mail = async (req, res) => {
             html: `<p>Imię: ${name}</p> <p>Email: ${email}</p> <p>Topic: ${topic}</p><p>${messege}</p>`
         })
         transporter.sendMail({
-            from: 'NikoCode Kontakt',
+            from: 'NikoCode Contact',
             to: `${email}`,
             subject: 'Thanks for you contact',
             html: `Thanks for you contact! I recived u'r mail and I'll try response soon as possible🔥<br/><br/> Have nice day!<br/>NikoCode`

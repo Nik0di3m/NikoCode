@@ -19,7 +19,7 @@ const Hero = () => {
                         <h2 className="text-2xl mt-2">Web developer</h2>
                     </div>
                     <div className="mt-6">
-                        <p className="w-5/6 font-light lg:w-2/3 dark:text-secondary">Junior level experience in web developer. Love in React and Firebase, producing quality work with passion.</p>
+                        <p className="w-5/6 font-light lg:w-2/3 dark:text-secondary">Junior level experience in web developer. In love with React and Firebase, producing quality work with passion.</p>
                     </div>
                     <Button
                         text="Contact Me"
