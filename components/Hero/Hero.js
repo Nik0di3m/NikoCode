@@ -15,7 +15,7 @@ const Hero = () => {
                 {/* main container */}
                 <div className="flex flex-col justify-center break-words w-5/6 h-auto lg:w-5/12">
                     <div>
-                        <h1 className="text-4xl font-medium">Hi, I'm Norbert</h1>
+                        <h1 className="text-4xl font-medium">Hi, I m Norbert</h1>
                         <h2 className="text-2xl mt-2">Web developer</h2>
                     </div>
                     <div className="mt-6">
