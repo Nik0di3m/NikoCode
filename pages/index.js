@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import AboutMe from '../components/AboutMe/AboutMe'
 import Contact from '../components/Contact/Contact'
+import Footer from '../components/Footer/Footer'
 import Hero from '../components/Hero/Hero'
 import Menu from '../components/Menu/Menu'
 import MyJourney from '../components/MyJourney/MyJourney'
@@ -24,6 +25,7 @@ const index = () => {
         <NewProject />
         <Contact />
       </div>
+      <Footer />
 
     </div>
   )

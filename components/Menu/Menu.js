@@ -29,7 +29,7 @@ const Menu = () => {
                     <MenuItems text='About' />
                     <MenuItems text='Services' />
                     <MenuItems text='Portfolio' />
-                    <MenuItems text='Contactme' />
+                    <MenuItems text='Contact Me' />
                     {theme === 'light' ?
                         <MoonIcon className="h-5 ml-5 hover:scale-110 cursor-pointer" onClick={themeHendler} />
                         :

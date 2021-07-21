@@ -3,7 +3,7 @@ import Button from '../Button/Button'
 import { PaperAirplaneIcon } from '@heroicons/react/solid';
 const NewProject = () => {
     return (
-        <div className="flex flex-col bg-orange rounded-3xl p-4 mt-20 text-light lg:flex-row justify-evenly w-11/12 mx-auto">
+        <section className="flex flex-col bg-orange rounded-3xl p-4 mt-20 text-light lg:flex-row justify-evenly w-11/12 mx-auto">
             <div className="flex flex-col justify-center lg:w-2/6">
                 {/* text */}
                 <h2 className="text-3xl font-medium">Do you have a new project?</h2>
@@ -20,7 +20,7 @@ const NewProject = () => {
                 <Image src="/images/success.png" width={350} height={350} objectFit='contain' />
             </div>
 
-        </div>
+        </section>
     )
 }
 

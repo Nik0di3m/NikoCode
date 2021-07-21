@@ -2,7 +2,7 @@ import ServicesCard from "./ServicesCard"
 
 const Services = () => {
     return (
-        <div className="flex flex-col items-center mt-12">
+        <section className="flex flex-col items-center mt-12">
             {/* main */}
             <h2 className="text-3xl">
                 Services
@@ -16,7 +16,7 @@ const Services = () => {
                 <ServicesCard text="Backend Developer" image="/images/firebase.svg" />
                 <ServicesCard text="UI/UX Designer" image="/images/materialui.svg" />
             </div>
-        </div>
+        </section>
     )
 }
 
