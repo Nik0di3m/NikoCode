@@ -1,6 +1,29 @@
 import Image from 'next/image'
+import { useForm } from "react-hook-form";
 import { MailIcon, PhoneIcon } from '@heroicons/react/outline'
+import axios from 'axios';
 const Contact = () => {
+    const { register, handleSubmit, reset } = useForm();
+    const onSubmit = async (data) => {
+        let config = {
+            method: "post",
+            url: "/api/mail",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            data: data
+        };
+        try {
+
+            const res = await axios(config);
+            if (res.status === 200) {
+                reset()
+            }
+
+        } catch (error) {
+            console.log(error)
+        }
+    }
     return (
         <div className="flex flex-col items-center mt-12 lg:mt-16">
             <h2 className="text-3xl">Get In Touch</h2>
@@ -31,11 +54,29 @@ const Contact = () => {
                 </div>
                 <div className="lg:w-2/4 text-light">
                     {/* form */}
-                    <form className="flex flex-col items-center mb-4 md:inline-block lg:inline-block lg:mb-0">
-                        <input type="text" placeholder="Name:" className="rounded-2xl bg-orange p-[3px] w-full placeholder-light outline-none mb-2 pl-2" />
-                        <input type="email" placeholder="Email:" className="rounded-2xl bg-orange p-[3px] w-full placeholder-light outline-none mb-2 pl-2" />
-                        <input type="text" placeholder="Topic:" className="rounded-2xl bg-orange p-[3px] w-full placeholder-light outline-none mb-2 pl-2" />
-                        <textarea type="text" placeholder="Messege:" style={{ height: '22rem' }} className="rounded-2xl bg-orange p-[3px] w-full placeholder-light outline-none mb-2 pl-2 h-80 resize-none" />
+                    <form
+                        onSubmit={handleSubmit(onSubmit)}
+                        className="flex flex-col items-center mb-4 md:inline-block lg:inline-block lg:mb-0">
+                        <input
+                            {...register("name", {
+                                required: true,
+                            })}
+                            type="text" placeholder="Name:" className="rounded-2xl bg-orange p-[3px] w-full placeholder-light outline-none mb-2 pl-2" />
+                        <input
+                            {...register("email", {
+                                required: true,
+                            })}
+                            type="email" placeholder="Email:" className="rounded-2xl bg-orange p-[3px] w-full placeholder-light outline-none mb-2 pl-2" />
+                        <input
+                            {...register("topic", {
+                                required: true,
+                            })}
+                            type="text" placeholder="Topic:" className="rounded-2xl bg-orange p-[3px] w-full placeholder-light outline-none mb-2 pl-2" />
+                        <textarea
+                            {...register("message", {
+                                required: true,
+                            })}
+                            type="text" placeholder="Messege:" style={{ height: '22rem' }} className="rounded-2xl bg-orange p-[3px] w-full placeholder-light outline-none mb-2 pl-2 h-80 resize-none" />
                         <button type="submit" className="bg-orange p-2 w-36 rounded-2xl hover:scale-110 duration-200">Send</button>
                     </form>
                 </div>
