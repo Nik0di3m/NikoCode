@@ -27,7 +27,7 @@ const Portfolio = () => {
                 >
                     <ChevronLeftIcon className="h-8" />
                 </motion.div>
-                <div className="overflow-hidden max-h-80 shadow-2xl rounded-2xl mt-6">
+                <div className="overflow-hidden h-[70vh] md:h-[50vh] lg:max-h-80 lg:h-80 shadow-2xl rounded-2xl mt-6">
                     <AnimatePresence exitBeforeEnter>
                         {items
                             .filter((_, iterator) => iterator === slideIndex)
