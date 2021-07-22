@@ -25,11 +25,11 @@ const Menu = () => {
                     Niko<span className="text-orange">Code</span>
                 </div>
                 <div className="hidden lg:flex justify-between items-center">
-                    <MenuItems text='Home' />
-                    <MenuItems text='About' />
-                    <MenuItems text='Services' />
-                    <MenuItems text='Portfolio' />
-                    <MenuItems text='Contact Me' />
+                    <MenuItems text='Home' link="home" />
+                    <MenuItems text='About' link="about" />
+                    <MenuItems text='Services' link="services" />
+                    <MenuItems text='Portfolio' link="portfolio" />
+                    <MenuItems text='Contact Me' link="contact" />
                     {theme === 'light' ?
                         <MoonIcon className="h-5 ml-5 hover:scale-110 cursor-pointer hover:text-orange duration-200" onClick={themeHendler} />
                         :

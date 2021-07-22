@@ -3,7 +3,7 @@ import Button from "../Button/Button"
 import { DownloadIcon } from "@heroicons/react/solid"
 const AboutMe = () => {
     return (
-        <section className="flex flex-col items-center justify-center">
+        <section className="flex flex-col items-center justify-center about" id="about">
             {/* Main container */}
             <h2 className="text-3xl">
                 About Me

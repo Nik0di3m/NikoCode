@@ -2,7 +2,7 @@ import ServicesCard from "./ServicesCard"
 
 const Services = () => {
     return (
-        <section className="flex flex-col items-center mt-12">
+        <section className="flex flex-col items-center mt-12" id="services">
             {/* main */}
             <h2 className="text-3xl">
                 Services

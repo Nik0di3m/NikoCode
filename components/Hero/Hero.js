@@ -5,7 +5,7 @@ import Image from "next/image"
 import Button from '../Button/Button';
 const Hero = () => {
     return (
-        <div className="flex flex-col justify-center items-center lg:flex-row lg:min-h-[80vh]">
+        <div className="flex flex-col justify-center items-center lg:flex-row lg:min-h-[80vh]" id="home">
             <div className="flex-col flex justify-around items-center lg:flex-row">
                 <div className="flex justify-around h-auto w-2/5 mb-6 mt-2 lg:flex-col lg:h-60 lg:w-auto lg:mb-0 lg:mt-0">
                     {/* social meda */}

@@ -25,7 +25,7 @@ const Contact = () => {
         }
     }
     return (
-        <div className="flex flex-col items-center mt-12 lg:mt-16">
+        <div className="flex flex-col items-center mt-12 lg:mt-16" id="contact">
             <h2 className="text-3xl">Get In Touch</h2>
             <div className="flex flex-col-reverse items-center lg:flex lg:flex-row w-[95%] lg:w-10/12 lg:justify-around mt-8">
                 {/* main */}
