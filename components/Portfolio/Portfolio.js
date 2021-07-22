@@ -15,7 +15,7 @@ const Portfolio = () => {
         setSlide([slide + newDirection])
     }
     return (
-        <section className="flex flex-col mt-16">
+        <section className="flex flex-col p-4 mt-16 lg:w-11/12 lg:mx-auto">
             <div className="text-center">
                 <h2 className="text-3xl">Portfolio</h2>
                 <h3 className="text-xl font-light">Most recent work</h3>

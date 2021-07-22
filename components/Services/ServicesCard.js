@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { ArrowRightIcon } from '@heroicons/react/solid'
 const ServicesCard = ({ text, image, alt }) => {
     return (
-        <article className="shadow-2xl w-64 h-80 flex flex-col justify-around items-center rounded-xl p-4 mt-14 lg:mt-0 md:m-10">
+        <article className="shadow-2xl border-[1px] border-orange w-64 h-80 flex flex-col justify-around items-center rounded-xl p-4 mt-14 lg:mt-0 md:m-10">
             <div>
                 <Image src={image} width={100} height={100} alt={alt} />
             </div>
