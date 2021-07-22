@@ -37,6 +37,15 @@ const Portfolio = () => {
                                     initial={{ x: 1500 }}
                                     animate={{ x: 0 }}
                                     exit={{ x: -1500 }}
+                                    drag='x'
+                                    onDragEnd={(event, info) => {
+                                        console.log(info.point.x)
+                                        if (info.point.x < 1000) {
+                                            paginate(1)
+                                        } else {
+                                            paginate(-1)
+                                        }
+                                    }}
                                     transition={{
                                         duration: 0.5,
                                         type: "spring"

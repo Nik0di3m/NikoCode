@@ -16,7 +16,7 @@ export const data = [
         image: '/images/imassage.png',
         title: 'Imessage Clone',
         id: 3,
-        content: 'Just a simple clone, made in React.js, Redux. For backend i used MERN stack with Pusher solutions for real-time chat. Google Auth is implemented with Firebase.',
+        content: 'Just a simple clone, made in React.js, Redux. For backend i used Node.js, Express.js with Pusher solutions for real-time chat. Google Auth is implemented with Firebase.',
     },
     {
         image: '/images/netflix.png',
