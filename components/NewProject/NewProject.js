@@ -17,7 +17,7 @@ const NewProject = () => {
             </div>
             <div className="flex justify-center mt-12 lg:mt-0">
                 {/* image */}
-                <Image src="/images/success.png" width={350} height={350} objectFit='contain' />
+                <Image src="/images/success.png" width={350} height={350} objectFit='contain' alt="New project hurry!" />
             </div>
 
         </section>

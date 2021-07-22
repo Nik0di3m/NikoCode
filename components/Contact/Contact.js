@@ -49,7 +49,7 @@ const Contact = () => {
                     </div>
                     <div className="flex">
                         {/* image */}
-                        <Image src="/images/send.svg" width={350} height={350} />
+                        <Image src="/images/send.svg" width={350} height={350} alt="Sending message" />
                     </div>
                 </div>
                 <div className="lg:w-2/4 text-light">

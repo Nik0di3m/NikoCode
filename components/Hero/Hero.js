@@ -30,7 +30,7 @@ const Hero = () => {
                 </div>
                 <div className="p-2">
                     {/* image */}
-                    <Image src="/images/hero.svg" width='500' height='500' />
+                    <Image src="/images/hero.svg" width='500' height='500' alt="Web developer image" />
                 </div>
             </div>
         </div>

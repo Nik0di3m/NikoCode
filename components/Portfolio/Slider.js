@@ -9,7 +9,7 @@ const Slider = ({ data }) => {
             className="flex flex-col lg:h-80 lg:flex-row justify-around overflow-hidden items-center">
             <motion.div className="flex items-center w-[95%] lg:w-2/4 justify-center">
                 {/* image */}
-                <Image src={data.image} width={500} height={300} objectFit="contain" priority />
+                <Image src={data.image} width={500} height={300} objectFit="contain" alt={data.title} priority />
             </motion.div>
             <motion.div className="flex w-[95%] items-center lg:items-start lg:min-w-[500px] lg:w-2/4 lg:p-12 h-full flex-col">
                 {/* rightcontainer */}

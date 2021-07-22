@@ -11,7 +11,7 @@ const AboutMe = () => {
             <div className="flex-col flex lg:flex-row justify-around items-center">
                 <div>
                     {/* image */}
-                    <Image src="/images/aboutme.png" width={500} height={500} />
+                    <Image src="/images/aboutme.png" width={500} height={500} alt="About me image" />
                 </div>
                 <article className="w-[90%] p-2 text-justify lg:text-left dark:text-secondary items-center lg:w-2/6 h-80 lg:p-4 flex flex-col justify-center lg:items-start break-words">
                     {/* text */}
