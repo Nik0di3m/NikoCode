@@ -14,6 +14,7 @@ const index = () => {
     <div className="text-dark dark:bg-[#0d1117] dark:text-light transition duration-500 ease-in-out">
       <Head>
         <title>NikoCode</title>
+        <meta name="description" content="NikoCode Your web developer" />
       </Head>
       <Menu />
       <div className='max-w-[1536px] m-auto min-h-screen'>
