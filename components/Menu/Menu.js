@@ -31,19 +31,19 @@ const Menu = () => {
                     <MenuItems text='Portfolio' />
                     <MenuItems text='Contact Me' />
                     {theme === 'light' ?
-                        <MoonIcon className="h-5 ml-5 hover:scale-110 cursor-pointer" onClick={themeHendler} />
+                        <MoonIcon className="h-5 ml-5 hover:scale-110 cursor-pointer hover:text-orange duration-200" onClick={themeHendler} />
                         :
-                        <SunIcon className="h-5 ml-5 hover:scale-110 cursor-pointer" onClick={themeHendler} />
+                        <SunIcon className="h-5 ml-5 hover:scale-110 cursor-pointer  hover:text-orange duration-200" onClick={themeHendler} />
                     }
                 </div>
                 <div className="flex w-2/6 justify-between lg:hidden">
                     {theme === 'light' ?
-                        <MoonIcon className="h-8 ml-5 hover:scale-110 cursor-pointer" onClick={themeHendler} />
+                        <MoonIcon className="h-8 ml-5 hover:scale-110 hover:text-orange cursor-pointer" onClick={themeHendler} />
                         :
-                        <SunIcon className="h-8 ml-5 hover:scale-110 cursor-pointer" onClick={themeHendler} />
+                        <SunIcon className="h-8 ml-5 hover:scale-110 hover:text-orange cursor-pointer" onClick={themeHendler} />
                     }
                     {theme === 'light' ?
-                        <MenuIcon className="h-8" onClick={() => setActive(!active)} />
+                        <MenuIcon className="h-8 text-dark" onClick={() => setActive(!active)} />
                         :
                         <MenuIcon className="h-8 text-light" onClick={() => setActive(!active)} />
                     }
