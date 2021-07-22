@@ -15,6 +15,7 @@ const index = () => {
       <Head>
         <title>NikoCode</title>
         <meta name="description" content="NikoCode Your web developer" />
+        <link rel="icon" href="/logoNiko.ico" />
       </Head>
       <Menu />
       <div className='max-w-[1536px] m-auto min-h-screen'>
