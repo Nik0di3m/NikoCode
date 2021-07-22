@@ -14,13 +14,9 @@ const variants = {
     }
 }
 
-const Modal = ({ close }) => {
+const Modal = ({ close, number }) => {
     const [active, setActive] = useState(true)
 
-
-    const test = () => {
-        console.log('test')
-    }
 
     return (
         <AnimatePresence>
@@ -34,7 +30,8 @@ const Modal = ({ close }) => {
                         duration: 0.5,
                     }}
                 >
-                    <ModalItems />
+                    {/* Generujemy text z api i ściągamy go w to miejsce */}
+                    <ModalItems number={number} />
                 </motion.div>
             </motion.div>
         </AnimatePresence>

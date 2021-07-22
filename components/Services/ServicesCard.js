@@ -3,7 +3,7 @@ import { ArrowRightIcon } from '@heroicons/react/solid'
 import Modal from './Modal'
 import { useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
-const ServicesCard = ({ text, image, alt }) => {
+const ServicesCard = ({ text, image, alt, number }) => {
     const [active, setActive] = useState(false)
     const close = () => {
         setTimeout(() => {
@@ -21,7 +21,7 @@ const ServicesCard = ({ text, image, alt }) => {
             <div className="w-full flex items-center text-orange cursor-pointer hover:scale-105 transition duration-200" onClick={() => setActive(!active)}>
                 View more <ArrowRightIcon className='h-6 ml-2' />
             </div>
-            {active && <Modal close={close} />}
+            {active && <Modal close={close} number={number} />}
 
         </article>
     )
