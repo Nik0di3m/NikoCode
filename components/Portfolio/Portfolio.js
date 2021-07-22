@@ -1,38 +1,86 @@
+import { wrap } from '@popmotion/popcorn'
+import { useState } from 'react'
+import { data } from './data'
+import Image from 'next/image'
+import Slider from './Slider'
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/solid'
+import { AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import Button from '../Button/Button'
-import Image from "next/image"
 const Portfolio = () => {
+    const items = data
+    const [[slide, direction], setSlide] = useState([0, 0])
+    const slideIndex = wrap(0, items.length, slide)
+    const paginate = (newDirection) => {
+        setSlide([slide + newDirection])
+    }
     return (
         <section className="flex flex-col mt-16">
             <div className="text-center">
                 <h2 className="text-3xl">Portfolio</h2>
                 <h3 className="text-xl font-light">Most recent work</h3>
             </div>
-            <article className="flex flex-col lg:flex-row justify-around overflow-hidden items-center">
-                {/* main */}
-                <div className="flex items-center w-[95%] lg:w-2/4 justify-center">
-                    {/* image */}
-                    <Image src="/images/netflix.png" width={500} height={300} objectFit="contain" />
+            <div className="flex justify-between">
+                <motion.div className="bg-transparent inline-flex text-orange justify-center items-center cursor-pointer" onClick={() => paginate(-1)}
+                    whileTap={{ scale: 0.9 }}
+                    whileHover={{ scale: 1.5 }}
+                >
+                    <ChevronLeftIcon className="h-8" />
+                </motion.div>
+                <div className="overflow-hidden max-h-80 shadow-2xl rounded-2xl mt-6">
+                    <AnimatePresence exitBeforeEnter>
+                        {items
+                            .filter((_, iterator) => iterator === slideIndex)
+                            .map(item => (
+                                <motion.div
+                                    key={item.id}
+                                    initial={{ x: 1500 }}
+                                    animate={{ x: 0 }}
+                                    exit={{ x: -1500 }}
+                                    transition={{
+                                        duration: 0.5,
+                                        type: "spring"
+                                    }}
+                                    className="flex w-full flex-col lg:h-80 lg:flex-row justify-around overflow-hidden items-center">
+                                    <motion.div className="flex items-center w-[95%] lg:w-2/4 justify-center">
+                                        {/* image */}
+                                        <Image priority src={item.image} width={500} height={300} objectFit="contain" />
+                                    </motion.div>
+                                    <motion.div className="flex w-[95%] items-center lg:items-start lg:min-w-[500px] lg:w-2/4 lg:p-12 h-full flex-col">
+                                        {/* rightcontainer */}
+                                        <motion.div className="text-center lg:text-left lg:w-3/4">
+                                            <h3 className="mb-6 text-xl">{item.title}</h3>
+                                            <p className="font-light">
+                                                {item.content}
+                                            </p>
+                                        </motion.div>
+                                        <motion.div className="flex justify-center w-full lg:justify-start">
+                                            <Button text="Try Demo!" style="w-36 mt-8 shadow-xl" color="bg-orange text-light" />
+                                        </motion.div>
+                                    </motion.div>
+                                </motion.div>
+                            ))}
+                    </AnimatePresence>
                 </div>
-                <div className="flex w-[95%] items-center lg:items-start lg:w-2/4 lg:p-12 h-full flex-col">
-                    {/* rightcontainer */}
-                    <div className="w-[95%] text-center lg:text-left lg:w-3/4">
-                        <h3 className="mb-6 text-xl">Netflix Clone</h3>
-                        <p className="font-light">
-                            Website adoptable to all devices, with ui copmonents. Making in Next.js with Firebase backend. For animation i used a Framer Motion
-                        </p>
-                    </div>
-                    <div className="flex justify-center w-full lg:justify-start">
-                        <Button text="Try Demo!" style="w-36 mt-8" color="bg-orange text-light" />
-                    </div>
-                </div>
-            </article>
+                <motion.div className="bg-transparent inline-flex text-orange justify-center items-center cursor-pointer" onClick={() => paginate(1)}
+                    whileTap={{ scale: 0.9 }}
+                    whileHover={{ scale: 1.5 }}
+                >
+                    <ChevronRightIcon className="h-8" />
+                </motion.div>
+            </div>
             <div className="flex justify-center mt-3">
-                <div className='flex justify-between w-1/5 lg:w-[5%]'>
-                    <div className="h-4 w-4 rounded-full bg-orange" />
-                    <div className="h-4 w-4 rounded-full bg-bgdark" />
-                    <div className="h-4 w-4 rounded-full bg-bgdark" />
+                <div className='flex justify-between lg:w-auto'>
+                    {items.map((item, iterator) => (
+                        <motion.div
+                            key={item.id}
+                            whileTap={{ scale: 0.9 }}
+                            whileHover={{ scale: 1.5 }}
+                            className={`h-4 w-4 ml-2 mr-2 mt-2 cursor-pointer rounded-full ${iterator === slideIndex ? 'bg-orange' : 'bg-bgdark'}`} onClick={() => setSlide([iterator, 0])} />
+                    ))}
                 </div>
             </div>
+
 
         </section>
     )
