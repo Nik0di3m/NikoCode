@@ -21,22 +21,22 @@ export const data = [
     },
     {
         text: "Start working as React freelancer",
-        data: '2020 Q2',
+        data: '2020 Q4',
         id: '5',
     },
     {
         text: "Start learning React Native",
-        data: '2021',
+        data: '2021 Q2',
         id: '6',
     },
     {
         text: "Deploy first mobile App",
-        data: '2021 Q3',
+        data: '2021 Q4',
         id: '7',
     },
     {
-        text: "Make my own start-up",
-        data: '2022 Q3',
+        text: "Who knows🔥",
+        data: '2022',
         id: '8',
     },
 

@@ -26,6 +26,7 @@ const Hero = () => {
                         icon={<PaperAirplaneIcon className="h-6 rotate-90" />}
                         style='mt-6 shadow-md w-40'
                         color="bg-orange text-light"
+                        link="#contact"
                     />
                 </div>
                 <div className="p-2">

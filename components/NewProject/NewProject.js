@@ -13,6 +13,7 @@ const NewProject = () => {
                     color="bg-light text-orange"
                     icon={<PaperAirplaneIcon className="h-8 w-8 rotate-90" />}
                     style="w-44 font-medium mt-6"
+                    link="#contact"
                 />
             </div>
             <div className="flex justify-center mt-12 lg:mt-0">

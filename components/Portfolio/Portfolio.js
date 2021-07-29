@@ -20,14 +20,14 @@ const Portfolio = () => {
                 <h2 className="text-3xl">Portfolio</h2>
                 <h3 className="text-xl font-light">Most recent work</h3>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between ">
                 <motion.div className="bg-transparent inline-flex text-orange justify-center items-center cursor-pointer" onClick={() => paginate(-1)}
                     whileTap={{ scale: 0.9 }}
                     whileHover={{ scale: 1.5 }}
                 >
                     <ChevronLeftIcon className="h-8" />
                 </motion.div>
-                <div className="overflow-hidden h-[70vh] md:h-[50vh] lg:max-h-80 lg:h-80 shadow-2xl rounded-2xl mt-6">
+                <div className="overflow-hidden h-[80vh] md:h-[50vh] lg:h-82 shadow-2xl rounded-2xl mt-6 lg:flex lg:items-center">
                     <AnimatePresence exitBeforeEnter>
                         {items
                             .filter((_, iterator) => iterator === slideIndex)
@@ -50,10 +50,10 @@ const Portfolio = () => {
                                         duration: 0.5,
                                         type: "spring"
                                     }}
-                                    className="flex w-full flex-col lg:h-80 lg:flex-row justify-around overflow-hidden items-center">
+                                    className="flex w-full flex-col lg:h-82 lg:flex-row justify-around overflow-hidden items-center">
                                     <motion.div className="flex items-center w-[95%] lg:w-2/4 justify-center">
                                         {/* image */}
-                                        <Image priority src={item.image} width={500} height={300} objectFit="contain" />
+                                        <Image priority src={item.image} width={500} height={300} objectFit="contain" alt={item.title} />
                                     </motion.div>
                                     <motion.div className="flex w-[95%] items-center lg:items-start lg:min-w-[500px] lg:w-2/4 lg:p-12 h-full flex-col">
                                         {/* rightcontainer */}
@@ -64,7 +64,7 @@ const Portfolio = () => {
                                             </p>
                                         </motion.div>
                                         <motion.div className="flex justify-center w-full lg:justify-start">
-                                            <Button text="Try Demo!" style="w-36 mt-8 shadow-xl" color="bg-orange text-light" />
+                                            <Button text="Try Demo!" style="w-36 mt-8 shadow-xl" color="bg-orange text-light" link={item.link} target="_blank" />
                                         </motion.div>
                                     </motion.div>
                                 </motion.div>

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import Image from "next/image"
 import Button from "../Button/Button"
 import { AnimatePresence } from 'framer-motion'
+import Link from 'next/link'
 const Slider = ({ data }) => {
 
     return (
@@ -20,7 +21,7 @@ const Slider = ({ data }) => {
                     </p>
                 </motion.div>
                 <motion.div className="flex justify-center w-full lg:justify-start">
-                    <Button text="Try Demo!" style="w-36 mt-8" color="bg-orange text-light" />
+                    <Button text="Try Demo!" style="w-36 mt-8" color="bg-orange text-light" link={data.link} />
                 </motion.div>
             </motion.div>
         </motion.div>
