@@ -64,7 +64,7 @@ const Portfolio = () => {
                                             </p>
                                         </motion.div>
                                         <motion.div className="flex justify-center w-full lg:justify-start">
-                                            <Button text="Try Demo!" style="w-36 mt-8 shadow-xl" color="bg-orange text-light" link={item.link} target="_blank" />
+                                            <Button text="Try It!" style="w-36 mt-8 shadow-xl" color="bg-orange text-light" link={item.link} target="_blank" />
                                         </motion.div>
                                     </motion.div>
                                 </motion.div>

@@ -1,5 +1,11 @@
 export const data = [
-
+    {
+        image: '/images/dzomakeupPortfolio.webp',
+        title: 'Dzomakeup.pl',
+        id: 0,
+        content: 'Website adoptable to all devices, with ui copmonents. Making in Next.js with Strapi CMS. For frontend I used a tailwind CSS. All content is rendering from CMS',
+        link: 'https://dzomakeup.pl'
+    },
     {
         image: '/images/googleDocs.webp',
         title: 'Google Docs Clone',
