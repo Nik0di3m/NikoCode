@@ -7,7 +7,7 @@ export const data = [
         link: 'https://dzomakeup.pl'
     },
     {
-        image: '/images/airbnbcolne.webp',
+        image: '/images/airbnbclone.webp',
         title: 'Airbnb Clone',
         id: 1,
         content: 'Airbnb clone made with Next.js and Strapi. For CSS i used a tailwindcss. Website has a working serach bar, but for now u can only search places in Warsaw',
